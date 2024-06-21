@@ -13,15 +13,15 @@ const Header2 = () => {
                     {/*<img className="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />*/}
                 </a>
             </div>
-<div className="grow max-lg:hidden pr-20">
-        <form className="ml-1 mr-4">
-            <input
-              type='text'
-              placeholder='Buscar eventos'
-              className='w-full h-11 rounded-lg p-2 border border-gray-400 text-black shadow-md outline-none focus:border focus:border-blue-600 focus:shadow-lg'
-            />
-        </form>
-</div>
+            <div className="grow max-lg:hidden">
+                    <form className="ml-4 mr-10">
+                        <input
+                        type='text'
+                        placeholder='Buscar eventos'
+                        className='w-full h-11 rounded-lg p-2 border border-gray-400 text-black shadow-md outline-none focus:border focus:border-blue-600 focus:shadow-lg'
+                        />
+                    </form>
+            </div>
 
             <button type="button" className="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
                 {/*<!-- Menu open: "hidden", Menu closed: "block" -->*/}
@@ -35,6 +35,8 @@ const Header2 = () => {
                 </svg>
             </button>
 
+            
+
             <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
                 <Link href="/eventos/criar" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
                     Crie seu Evento
@@ -44,7 +46,7 @@ const Header2 = () => {
                 </Link>
             </div>
 
-            <a href="#" title="" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button"> Cadastre-se </a>
+            <Link href="#" title="" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button"> Cadastre-se </Link>
         </nav>
 
         {/*<!-- xs to lg -->*/}
@@ -61,14 +63,14 @@ const Header2 = () => {
             <div className="flow-root">
                 <div className="flex flex-col px-6 -my-2 space-y-1">
 
-                    <a href="#" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Crie seu Evento </a>
+                    <Link href="#" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Crie seu Evento </Link>
 
-                    <a href="#" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Acessar Conta </a>
+                    <Link href="#" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Acessar Conta </Link>
                 </div>
             </div>
 
             <div className="px-6 mt-6">
-                <a href="#" title="" className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700" role="button"> Cadastre-se </a>
+                <Link href="#" title="" className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700" role="button"> Cadastre-se </Link>
             </div>
         </nav>
     </div>

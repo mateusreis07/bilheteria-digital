@@ -1,13 +1,8 @@
 
 
-"use client";
 
-
-
-
-
-export default function Footer (){
-        return (
+const Footer = () => {
+    return (
 
 <section className="py-10 bg-blue-900 sm:pt-16 lg:pt-24">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 container max-w-6xl">
@@ -170,3 +165,6 @@ export default function Footer (){
 </section>
     );
 };
+
+
+export default Footer;

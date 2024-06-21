@@ -10,7 +10,7 @@ import EventsGerais from "./components/EventsGeral";
 import Card2 from "./components/card2";
 import Header2 from "./components/Header2";
 import SubCategoria from "./components/subcategoria";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 export default function Home() {
     return (
