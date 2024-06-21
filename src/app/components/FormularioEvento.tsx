@@ -1,19 +1,21 @@
 "use client";
-
 import { useState } from 'react';
 
+interface OnSaveProps{
+  onSave: any[]
+}
 
-export default function FormularioEvento({ onSave }) {
+export default function FormularioEvento({ onSave }: OnSaveProps) {
     const [nome, setNome] = useState('');
-    const [descricao, setDescricao] = useState('');
+    const [local, setDescricao] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSave({ nome, descricao });
+        onSave({ nome, local });
         setNome('');
         setDescricao('');
       };
-  
+
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -27,9 +29,9 @@ export default function FormularioEvento({ onSave }) {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Descrição</label>
+          <label className="block text-sm font-medium text-gray-700">Local</label>
           <textarea
-            value={descricao}
+            value={local}
             onChange={(e) => setDescricao(e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             required

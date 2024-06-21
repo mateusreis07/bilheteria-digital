@@ -11,7 +11,7 @@ export default function DetalhesEvento({ params }: { params: { id: string } }) {
   const { eventos } = useEventos();
   const [evento, setEvento] = useState(null);
 
-  
+
 
     useEffect(() => {
         if (id) {
@@ -37,7 +37,7 @@ export default function DetalhesEvento({ params }: { params: { id: string } }) {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{evento.nome}</h1>
-      <p>{evento.descricao}</p>
+      <p>{evento.local}</p>
     </div>
   );
 }
