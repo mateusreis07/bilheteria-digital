@@ -1,11 +1,12 @@
 "use client";
 import Link from 'next/link';
 
-interface EventoProps {
-  evento: any[]
-}
 
-export default function EventoCard({ evento }: EventoProps) {
+
+
+
+
+export default function EventCard({ evento }) {
     return (
 <>
 <Link href={`/eventos/${evento.id}`}>

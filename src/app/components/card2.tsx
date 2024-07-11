@@ -4,9 +4,10 @@ import Link from 'next/link';
 
 export default function Card2() {
     return (
-<section className="container max-w-5xl mx-auto">
+<section className="">
     <div className="">
-        <div className="grid max-w-md grid-cols-1 gap-5 mx-auto mt-8 lg:mt-16 lg:grid-cols-4 lg:max-w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:max-w-full">
+         
 
         <div className="overflow-hidden bg-white rounded shadow border-2 border-red-600">
                 <div className="p-5">

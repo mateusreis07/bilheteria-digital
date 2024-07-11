@@ -27,14 +27,28 @@ const Categorias = () => {
   <div className='container max-w-6xl mx-auto p-4'>
     <h1 className=" text-xl font-bold mb-4">Categorias</h1>
     <Swiper
-      slidesPerView={8}
+        breakpoints={{
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 8,
+            spaceBetween: 10,
+          },
+        }}
+      slidesPerView={3}
       pagination={{clickable: true}}
       //autoplay={{delay: 5000, pauseOnMouseEnter: true}}
       navigation={{enabled: true}}
       className=''
     >
       {data.map( (item) => (
-        <SwiperSlide key={item.id} className=''>
+        <SwiperSlide key={item.id}>
           <div className='flex justify-center'>
             <img
               src={item.image}

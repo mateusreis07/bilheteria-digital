@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useEventos } from "@/context/EventoContext";
-import EventoCard from "./EventCard";
+import EventCard from "./EventCard";
 
 {/*const allEvents = [
   { id: 1, nome: 'Evento 1', descricao: 'Descrição do evento 1' },
@@ -20,7 +20,8 @@ export default function EventsGerais() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:max-w-full">
 
         {eventos.map((evento) => (
-          <EventoCard key={evento.id} evento={evento} />
+          <EventCard key={evento.id} evento={evento} />
+
         ))}
       </div>
   </div>

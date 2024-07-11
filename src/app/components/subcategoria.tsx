@@ -1,6 +1,6 @@
-
+"use client";
 import { useEventos } from "@/context/EventoContext";
-import EventoCard from "./EventCard";
+import EventCard from "./EventCard";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { register } from 'swiper/element-bundle';
@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay'
 import 'swiper/css/keyboard'
+import Card2 from "./card2";
 
 const data = [
   { id: '1', image: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/fullstack-blog.png'},
@@ -26,30 +27,41 @@ const data = [
   { id: '11', image: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/fullstack-blog.png'},
 ];
 
-const SubCategoria = () => {
+export default function SubCategoria () {
   const { eventos } = useEventos();
 
-
-  return (
+    return (
   <div className="p-4">
   <div className='container max-w-6xl mx-auto'>
     <h1 className="text-xl font-bold mb-4">SubCategoria</h1>
     <Swiper
-      slidesPerView={4}
-      //pagination={{clickable: true}}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+        }}
+      slidesPerView={2}
+      pagination={{clickable: true}}
       //autoplay={{delay: 5000, pauseOnMouseEnter: true}}
       navigation={{enabled: true}}
-      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:max-w-full'
+     className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:max-w-full'
     >
       {eventos.map( (evento) => (
         <SwiperSlide key={evento.id} className="mr-2 pr-2">
-          <EventoCard key={evento.id} evento={evento}/>
+          <EventCard key={evento.id} evento={evento} />
         </SwiperSlide>
       ))}
     </Swiper>
     </div>
   </div>
   );
-};
-
-export default SubCategoria;
+}
